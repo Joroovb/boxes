@@ -6,8 +6,7 @@ LABEL com.github.containers.toolbox="true" \
       maintainer="jorisvanbreugel@mailbox.org"
 
 COPY extra-packages /
-RUN pacman -Syuu --noconfirm && \
-    pacman -S --noconfirm - < extra-packages
+RUN pacman -S --needed --noconfirm - < /extra-packages
 RUN rm /extra-packages
 
 RUN   ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/docker && \
