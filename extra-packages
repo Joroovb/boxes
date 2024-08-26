@@ -22,9 +22,6 @@ npm
 plocate
 python3
 ripgrep
-speedtest-cli
-starship
-vimdiff
 wl-clipboard
 zellij
 zstd
