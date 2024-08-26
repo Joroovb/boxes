@@ -6,8 +6,8 @@ LABEL com.github.containers.toolbox="true" \
       maintainer="jorisvanbreugel@mailbox.org"
 
 COPY extra-packages /
-RUN pacman -Syuu && \
-    pacman -S - < extra-packages
+RUN pacman -Syuu --noconfirm && \
+    pacman -S --noconfirm - < extra-packages
 RUN rm /extra-packages
 
 RUN   ln -fs /bin/sh /usr/bin/sh && \
